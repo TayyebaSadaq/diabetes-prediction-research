@@ -1,0 +1,11 @@
+import pandas as pd
+import scipy
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pickle
+
+data_path = "../data/raw_data.xlsx"
+data = pd.read_excel(data_path)
+print("data read")
