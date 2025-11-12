@@ -6,6 +6,21 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import pickle
 
+# ~ Loading Data
 data_path = "data\\raw_data.csv"
 data = pd.read_excel(data_path)
 print("data read")
+
+# ~ Inspecting data
+print(data.head())
+data.info()
+print(data.isnull().sum())
+
+print(data.describe())
+
+# ~ Feature Scaling
+""" need to standardise data with wide numeric ranges to better suit ML algorithms """
+scaler = StandardScaler()
+# ~ see what this needs applying to
+# scaled_features = scaler.fit_transform(data[['BMI',]])
+
