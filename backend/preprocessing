@@ -40,11 +40,3 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 with open("data\\preprocessed_data.pkl", "wb") as f:
     pickle.dump((X_train, X_test, y_train, y_test, scaler), f)
 print("Preprocessed data saved as .pkl.")
-
-# ~ Saving the preprocessed data as CSV for visualisations
-data_scaled = data.copy()
-data_scaled[['BMI','MentHlth','PhysHlth']] = scaled_features
-""" combine x and y into 1 dataframe """
-processed_df = pd.concat([data_scaled[X.columns], y], axis=1)
-processed_df.to_csv("data\\preprocessed_data.csv", index=False)
-print("Preprocessed data saved as CSV.")
