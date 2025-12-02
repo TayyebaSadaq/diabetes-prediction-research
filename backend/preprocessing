@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import pickle
 import csv
 
-# ~ Loading Data ``
+# ~ Loading Data 
 data_path = "data\\raw_data.csv"
 data = pd.read_excel(data_path)
 print("data read")
